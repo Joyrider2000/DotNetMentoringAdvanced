@@ -1,6 +1,7 @@
 ﻿using CartingService.BLL.Services;
 using CartingService.DAL.Entities;
 using CartingService.DAL.Repositories;
+using Microsoft.Extensions.Logging;
 using Moq;
 using System.Text.Json;
 
@@ -23,8 +24,9 @@ namespace CartingService.Tests.CartingService.BLL.Services
         public void GetAllCartsTest()
         {
             Mock<ICartRepository> mockRepository = new();
+            Mock<ILogger<CartService>> mockLogger = new();
             mockRepository.Setup(x => x.GetAllCarts()).Returns(new List<Cart>{ cart });
-            var service = new CartService(mockRepository.Object);
+            var service = new CartService(mockRepository.Object, mockLogger.Object);
 
             var result = service.GetAllCarts();
 

@@ -7,13 +7,8 @@ using CatalogService.DAL.SQLiteDb.ProductRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Identity.Web;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Authentication.AzureAD.UI;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.Identity.Web.UI;
 using Microsoft.OpenApi.Models;
-using Microsoft.ApplicationInsights.Extensibility;
-using Serilog;
 using Microsoft.Extensions.Logging.ApplicationInsights;
 using CatalogService.DAL.Configuration.Options;
 using CatalogService.BLL.Application.Repositories;
@@ -40,7 +35,8 @@ namespace CatalogServiceWebApp {
                     configureTelemetryConfiguration: (config) => config.ConnectionString = Configuration["ApplicationInsightsConnectionString"],
                     configureApplicationInsightsLoggerOptions: (options) => { }
                 );
-                builder.AddFilter<ApplicationInsightsLoggerProvider>("CatalogService", LogLevel.Trace);
+                builder.AddFilter<ApplicationInsightsLoggerProvider>("CatalogService", Microsoft.Extensions.Logging.LogLevel.Trace);
+            });
 
             services.AddApplicationInsightsTelemetry();
 

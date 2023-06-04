@@ -3,15 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogApp", "CatalogApp\CatalogApp.csproj", "{14655600-4825-45B0-9E8F-B6114837CD1E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.BLL", "CatalogService.BLL\CatalogService.BLL.csproj", "{C1975BEF-6838-4C9A-8249-0A1A4C558A78}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.DAL", "CatalogService.DAL\CatalogService.DAL.csproj", "{1C779B4E-02D3-41F1-8799-5F68A12AF7F5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogService.Tests", "CatalogService.Tests\CatalogService.Tests.csproj", "{237717EA-0BF5-43CE-878D-236F06F14727}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CatalogServiceWebApp", "CatalogServiceWebApp\CatalogServiceWebApp.csproj", "{841216D3-3110-479D-AA38-55E7DF6E83B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CatalogServiceWebApp", "CatalogServiceWebApp\CatalogServiceWebApp.csproj", "{841216D3-3110-479D-AA38-55E7DF6E83B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{14655600-4825-45B0-9E8F-B6114837CD1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{14655600-4825-45B0-9E8F-B6114837CD1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{14655600-4825-45B0-9E8F-B6114837CD1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{14655600-4825-45B0-9E8F-B6114837CD1E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{C1975BEF-6838-4C9A-8249-0A1A4C558A78}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{C1975BEF-6838-4C9A-8249-0A1A4C558A78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C1975BEF-6838-4C9A-8249-0A1A4C558A78}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -5,11 +5,9 @@ VisualStudioVersion = 17.5.33414.496
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService", "CartingService\CartingService.csproj", "{EB9D4481-67EC-496D-86D7-3D62EC591231}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartApp", "CartApp\CartApp.csproj", "{0F294439-C234-4CAF-BE8A-A42D12DCEE5C}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingService.Tests", "CartingService.Tests\CartingService.Tests.csproj", "{8C09C661-AC25-491B-AA13-E08B74E2847E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CartingServiceWebApp", "CartingServiceWebApp\CartingServiceWebApp.csproj", "{CE7AA63C-9F8D-496E-A9D1-AABB206131A6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CartingServiceWebApp", "CartingServiceWebApp\CartingServiceWebApp.csproj", "{CE7AA63C-9F8D-496E-A9D1-AABB206131A6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,10 +19,6 @@ Global
 		{EB9D4481-67EC-496D-86D7-3D62EC591231}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB9D4481-67EC-496D-86D7-3D62EC591231}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB9D4481-67EC-496D-86D7-3D62EC591231}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0F294439-C234-4CAF-BE8A-A42D12DCEE5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0F294439-C234-4CAF-BE8A-A42D12DCEE5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0F294439-C234-4CAF-BE8A-A42D12DCEE5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0F294439-C234-4CAF-BE8A-A42D12DCEE5C}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8C09C661-AC25-491B-AA13-E08B74E2847E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8C09C661-AC25-491B-AA13-E08B74E2847E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C09C661-AC25-491B-AA13-E08B74E2847E}.Release|Any CPU.ActiveCfg = Release|Any CPU
