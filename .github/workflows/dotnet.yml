@@ -27,8 +27,8 @@ jobs:
     - name: Catalog Service - Test
       run: dotnet test ./CatalogService/CatalogService.sln --no-build --verbosity normal
     - name: Carting Service - Restore dependencies
-      run: dotnet restore ./CartingService/CartingService.sln
+      run: dotnet restore ./CartService/CartingService.sln
     - name: Carting Service - Build
-      run: dotnet build ./CartingService/CartingService.sln --no-restore
+      run: dotnet build ./CartService/CartingService.sln --no-restore
     - name: Carting Service - Test
-      run: dotnet test ./CartingService/CartingService.sln --no-build --verbosity normal
+      run: dotnet test ./CartService/CartingService.sln --no-build --verbosity normal
