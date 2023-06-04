@@ -11,25 +11,25 @@ namespace CatalogService.Tests.CatalogService.BLL.Application.Services
     public class BaseServiceTests
     {
         [TestMethod]
-        public void GetProductListTest()
+        public async Task GetProductListTest()
         {
             Mock<IBaseRepository<ProductEntity>> mockRepository = new();
             Mock<ILogger<BaseService<ProductEntity>>> mockLogger = new();
             mockRepository.Setup(x => x.List()).ReturnsAsync(new List<ProductEntity> { new ProductEntity() });
             var service = new BaseService<ProductEntity>(mockRepository.Object, mockLogger.Object);
-            var result = service.List();
+            var result = await service.List();
             Assert.IsTrue(result != null);
-            Assert.IsTrue(result.Result.Count() == 1);
+            Assert.IsTrue(result.Count() == 1);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ValidationException))]
-        public void AddInvalidProductTest()
+        public async Task AddInvalidProductTest()
         {
             Mock<IBaseRepository<ProductEntity>> mockRepository = new();
             Mock<ILogger<BaseService<ProductEntity>>> mockLogger = new();
             var service = new BaseService<ProductEntity>(mockRepository.Object, mockLogger.Object);
-            service.Add(new ProductEntity());
+            await service.Add(new ProductEntity());
         }
     }
 }
