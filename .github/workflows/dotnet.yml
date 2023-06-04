@@ -7,7 +7,7 @@ on:
 #  push:
 #    branches: [ "main" ]
   pull_request:
-    branches: [ "continuous_integration" ]
+    branches: [ "Lesson5" ]
 
 jobs:
   build:
