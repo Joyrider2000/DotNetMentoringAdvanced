@@ -59,6 +59,7 @@ namespace CatalogServiceWebApp {
                         }
                     }
                 });
+
                 c.AddSecurityRequirement(new OpenApiSecurityRequirement
                 {
                     {
