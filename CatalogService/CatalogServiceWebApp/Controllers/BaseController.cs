@@ -6,13 +6,12 @@ using CatalogServiceWebApp.Models.Roles;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Identity.Web.Resource;
-using System.Data;
 
 namespace CatalogServiceWebApp.Controllers
 {
     [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:ApiScope")]
     [Produces("application/json")]
-//    [Authorize(Roles = $"{Roles.Buyer}, {Roles.Manager}")]
+    [Authorize(Roles = $"{Roles.Buyer}, {Roles.Manager}")]
     [ApiController]
     public abstract class BaseController<T> : Controller where T : IdEntity
     {
@@ -45,7 +44,7 @@ namespace CatalogServiceWebApp.Controllers
         }
 
         [HttpPost]
-//        [Authorize(Roles = Roles.Manager)]
+        [Authorize(Roles = Roles.Manager)]
         [ProducesResponseType(StatusCodes.Status201Created)]
         public async Task<IActionResult> Create([FromBody] T item)
         {
@@ -67,7 +66,7 @@ namespace CatalogServiceWebApp.Controllers
         }
 
         [HttpPut("{id}")]
- //       [Authorize(Roles = Roles.Manager)]
+        [Authorize(Roles = Roles.Manager)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Update([FromRoute] int id, [FromBody] T item)
         {
@@ -87,7 +86,7 @@ namespace CatalogServiceWebApp.Controllers
         }
 
         [HttpDelete("{id}")]
- //       [Authorize(Roles = Roles.Manager)]
+        [Authorize(Roles = Roles.Manager)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
         public async Task<IActionResult> Delete([FromRoute] int id)
         {

@@ -1,10 +1,12 @@
 ﻿using CartingService.BLL.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace CartingServiceWebApp.Controllers
 {
     [Produces("application/json")]
     [ApiController]
+    [Authorize]
     [Route("api/v2/cart")]
     public class CartV2Controller : CartV1Controller
     {

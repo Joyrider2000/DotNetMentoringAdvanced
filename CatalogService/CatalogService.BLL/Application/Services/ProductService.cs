@@ -3,11 +3,6 @@ using CatalogService.BLL.Application.Services.Message;
 using CatalogService.BLL.Domain.Entities;
 using Microsoft.Extensions.Logging;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace CatalogService.BLL.Application.Services
 {
     public class ProductService : BaseService<ProductEntity>, IProductService

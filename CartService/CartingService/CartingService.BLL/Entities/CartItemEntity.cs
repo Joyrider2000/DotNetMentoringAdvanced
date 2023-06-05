@@ -1,7 +1,4 @@
-﻿using CartingService.BLL.Entities;
-using System.ComponentModel.DataAnnotations;
-
-namespace CartingService.BLL.Entities
+﻿namespace CartingService.BLL.Entities
 {
     public class CartItemEntity
     {

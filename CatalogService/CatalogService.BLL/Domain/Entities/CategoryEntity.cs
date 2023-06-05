@@ -1,5 +1,4 @@
 ﻿using System.ComponentModel.DataAnnotations;
-using System.Runtime.Serialization;
 
 namespace CatalogService.BLL.Domain.Entities
 {

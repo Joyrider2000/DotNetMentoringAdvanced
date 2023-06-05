@@ -4,13 +4,10 @@ using CatalogService.DAL.SQLiteDb.CategoryRepository.Mappers;
 using Microsoft.EntityFrameworkCore;
 using CatalogService.BLL.Domain.Entities;
 using CatalogService.BLL.Domain.Exceptions;
-using CatalogService.DAL.SQLiteDb.Base.Entities;
 using Microsoft.Data.Sqlite;
 using CatalogService.DAL.SQLiteDb.ProductRepository.Entities;
-using Serilog;
 using CatalogService.DAL.Configuration.Options;
 using Microsoft.Extensions.Logging;
-using CatalogService.BLL.Application.Repositories;
 
 namespace CatalogService.DAL.SQLiteDb.CategoryRepository
 {

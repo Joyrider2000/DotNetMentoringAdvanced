@@ -6,8 +6,6 @@ using CartingService.BLL.Entities;
 using AutoMapper;
 using CartingService.BLL.Mappers.Builders;
 using System.Text.Json;
-using Castle.Core.Logging;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
 using Microsoft.Extensions.Logging;
 
 namespace CartingService.BLL.Services

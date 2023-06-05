@@ -35,7 +35,7 @@ namespace CatalogServiceWebApp {
                     configureTelemetryConfiguration: (config) => config.ConnectionString = Configuration["ApplicationInsightsConnectionString"],
                     configureApplicationInsightsLoggerOptions: (options) => { }
                 );
-                builder.AddFilter<ApplicationInsightsLoggerProvider>("CatalogService", Microsoft.Extensions.Logging.LogLevel.Trace);
+                builder.AddFilter<ApplicationInsightsLoggerProvider>("CatalogService", LogLevel.Trace);
             });
 
             services.AddApplicationInsightsTelemetry();

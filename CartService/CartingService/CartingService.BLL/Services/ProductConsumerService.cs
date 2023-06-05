@@ -1,22 +1,11 @@
 ﻿using AutoMapper;
 using CartingService.BLL.Entities;
-using CartingService.BLL.Mappers.Builders;
 using CartingService.BLL.Services;
 using CartingService.CartingService.BLL.Entities.External.CatalogService;
-using CartingService.DAL.Entities;
-using Castle.Core.Logging;
-using Microsoft.Azure.Amqp.Framing;
 using Microsoft.Azure.ServiceBus;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using Microsoft.VisualStudio.TestTools.UnitTesting.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
 
 namespace CartingService.CartingService.BLL.Services
 {

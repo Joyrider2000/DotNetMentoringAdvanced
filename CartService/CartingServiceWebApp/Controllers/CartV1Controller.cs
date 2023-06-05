@@ -7,14 +7,13 @@ using System.ComponentModel.DataAnnotations;
 using CartingService.DAL.Exceptions;
 using Microsoft.Identity.Web.Resource;
 using Microsoft.AspNetCore.Authorization;
-using System.Data;
 
 namespace CartingServiceWebApp.Controllers
 {
     [RequiredScope(RequiredScopesConfigurationKey = "AzureAd:ApiScope")]
     [Produces("application/json")]
     [ApiController]
-//    [Authorize]
+    [Authorize]
     [Route("api/v1/cart")]
     public class CartV1Controller : Controller
     {

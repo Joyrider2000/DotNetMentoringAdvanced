@@ -24,23 +24,12 @@ namespace CartingServiceWebApp
 
         public void ConfigureServices(IServiceCollection services)
         {
-            /*            string? dbConnectionString = Configuration.GetSection("Database").GetValue<string>("ConnectionString");
-                        string? azureConnectionString = Configuration.GetSection("Azure").GetValue<string>("ConnectionString");
-                        string? azureQueueName = Configuration.GetSection("Azure").GetValue<string>("ProductQueueName");*/
-
-
             var appOptions = new AppOptions() {
                 DbConnectionString = Configuration["Database:ConnectionString"],
                 AzureConnectionString = Configuration["Azure:ConnectionString"],
                 AzureQueueName = Configuration["Azure:ProductQueueName"]
             };
 
-            /*var logger = new LoggerConfiguration()
-                .WriteTo.Console()
-                .WriteTo.ApplicationInsights(TelemetryConfiguration.Active, TelemetryConverter.Traces)
-                .Enrich.FromLogContext()
-                .CreateLogger();
-            */
             services.AddLogging(builder => {
                 // Only Application Insights is registered as a logger provider
                 builder.AddApplicationInsights(
@@ -49,9 +38,7 @@ namespace CartingServiceWebApp
                 );
                 builder.AddFilter<ApplicationInsightsLoggerProvider>("CartingService", Microsoft.Extensions.Logging.LogLevel.Trace);
             });
-/*            
-            ICartRepository cartRepository = new CartRepository(dbConnectionString);
-            ICartService cartService = new CartService(cartRepository);*/
+
             IMapper productMapper = ProductMapperBuilder.Build();
 
             services.AddMicrosoftIdentityWebApiAuthentication(Configuration);

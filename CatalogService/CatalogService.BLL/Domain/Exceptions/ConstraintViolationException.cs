@@ -3,7 +3,7 @@
     public class ConstraintViolationException : Exception
     {
         public ConstraintViolationException()
-            : base(string.Format("Constraint violation."))
+            : base("Constraint violation.")
         {
         }
 

@@ -1,7 +1,6 @@
 ﻿using Azure.Messaging.ServiceBus;
 using CatalogService.BLL.Application.Services.Message;
 using CatalogService.DAL.Configuration.Options;
-using Microsoft.Extensions.Options;
 using System.Text.Json;
 
 namespace CatalogService.DAL.Messages.Services

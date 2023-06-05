@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using System.Data.SqlTypes;
 
 namespace CartingService.BLL.Mappers.Builders
 {

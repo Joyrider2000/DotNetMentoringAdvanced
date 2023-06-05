@@ -1,5 +1,4 @@
 ﻿using CartingService.BLL.Entities;
-using CartingService.DAL.Entities;
 
 namespace CartingService.BLL.Services
 {
